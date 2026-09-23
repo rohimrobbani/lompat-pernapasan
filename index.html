@@ -1,0 +1,2487 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260922-23-bc19096","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/83d6dfdadcd4750a.telemetry_sdk.js" integrity="sha512-XS4Dvzp6vbagZS9vFErihvr8aO3S0tH78KWUefn06fmL4WYqryBtZj/IOLITYj7dFA4gPVvPg1W/JB1DK3uLNQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Froggy Lompat Pernapasan</title>
+  <style>
+:root {
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --pond-water: #3498db;
+  --pond-deep: #1b4f72;
+  --sky-top: #74ebd5;
+  --sky-bottom: #9face6;
+  --lily-pad: #2ecc71;
+  --lily-dark: #219653;
+  --card-bg: rgba(255, 255, 255, 0.94);
+  --text-dark: #2c3e50;
+  --accent-yellow: #f1c40f;
+  --accent-orange: #e67e22;
+  --danger-red: #e74c3c;
+  --correct-green: #27ae60;
+  --font-main: 'DM Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+  overflow: hidden;
+  font-family: var(--font-main);
+  background: #1b4f72;
+  color: var(--text-dark);
+}
+
+#app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+  z-index: 10;
+  padding: 16px;
+}
+
+.screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+  filter: blur(4px);
+  z-index: 0;
+}
+
+#global-controls {
+  position: absolute;
+  top: 58px;
+  right: 10px;
+  left: auto;
+  transform: none;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+  justify-content: flex-end;
+  max-width: calc(100% - 20px);
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.88);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-dark);
+  transition: transform 0.15s ease, background 0.2s ease;
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+}
+
+.icon-btn:active {
+  transform: translateY(1px);
+}
+
+#landing-screen {
+  background: radial-gradient(circle at top, var(--sky-top), var(--sky-bottom) 60%, var(--pond-deep) 100%);
+  text-align: center;
+}
+
+.logo-card {
+  background: var(--card-bg);
+  padding: 24px 32px;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid #ffffff;
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.title-main {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 900;
+  color: #1e8449;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 0px #abebc6;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.subtitle-main {
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.landing-frog-stage {
+  width: 220px;
+  height: 220px;
+  margin: 10px 0;
+  position: relative;
+  animation: frogHeroBreathe 2.4s ease-in-out infinite;
+}
+
+@keyframes frogHeroBreathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.04); }
+}
+
+@media (min-width: 701px) and (orientation: landscape) {
+  #landing-screen {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .logo-card {
+    width: min(92%, 960px);
+    max-width: 960px;
+    min-height: 360px;
+    padding: 28px 42px;
+    display: grid;
+    grid-template-columns: minmax(190px, 0.8fr) minmax(300px, 1.2fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 34px;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .logo-card > img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 150px !important;
+    height: 150px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .title-main,
+  .subtitle-main,
+  .landing-desc,
+  .menu-actions,
+  .author-tag {
+    grid-column: 2;
+  }
+
+  .title-main { grid-row: 1; }
+  .subtitle-main { grid-row: 2; }
+  .landing-desc { grid-row: 3; }
+  .menu-actions {
+    grid-row: 4;
+    margin-top: 8px;
+  }
+  .author-tag {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    margin-top: 8px;
+  }
+
+  .landing-frog-stage {
+    grid-column: 1;
+    grid-row: 4;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+}
+
+.menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 340px;
+  margin-top: 10px;
+}
+
+.btn-cta {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(46, 204, 113, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  min-height: 48px;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.5);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  min-height: 44px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e8f8f0;
+}
+
+.author-tag {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #566573;
+  font-weight: 600;
+}
+
+#mode-screen {
+  background: radial-gradient(circle at top, #a8ff78, #78ffd6 40%, var(--pond-deep) 100%);
+}
+
+#name-screen {
+  background: radial-gradient(circle at top, #a8ff78, #78ffd6 40%, var(--pond-deep) 100%);
+}
+
+.name-container {
+  background: var(--card-bg);
+  border: 4px solid #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.name-container h2 {
+  color: #1b4f72;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.name-container p {
+  color: #566573;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.player-name-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.player-name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player-name-field label {
+  color: #1b4f72;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.player-name-field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid #27ae60;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.95);
+  color: #2c3e50;
+  font: inherit;
+  font-weight: 700;
+}
+
+.player-name-field.hidden {
+  display: none;
+}
+
+.mode-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 90%;
+  max-width: 820px;
+  margin-top: 20px;
+}
+
+.mode-card {
+  background: var(--card-bg);
+  border: 3px solid #ffffff;
+  border-radius: 24px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  border-color: #2ecc71;
+}
+
+.mode-icon {
+  font-size: 2.5rem;
+  margin-bottom: 6px;
+}
+
+.mode-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1b4f72;
+}
+
+.mode-desc {
+  font-size: 1rem;
+  color: #566573;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .mode-container {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 12px;
+  }
+  .mode-card {
+    padding: 14px 16px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 14px;
+    text-align: left;
+  }
+  .mode-icon {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+}
+
+#game-screen {
+  padding: 10px;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(255,255,255,0.18) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 82% 72%, rgba(255,255,255,0.14) 0 2px, transparent 3px),
+    repeating-linear-gradient(115deg, transparent 0 18px, rgba(39,174,96,0.28) 19px 21px, transparent 22px 34px),
+    linear-gradient(135deg, #1e8449, #145a32 48%, #0e6655);
+}
+
+#game-grid {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 6px;
+  padding: 6px;
+  border: 5px solid #7dcea0;
+  border-radius: 22px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.16) 0 2px, transparent 2px 28px),
+    linear-gradient(180deg, rgba(255,255,255,0.12), transparent 18%, transparent 82%, rgba(0,0,0,0.14)),
+    #117864;
+  box-shadow: inset 0 0 0 3px rgba(9,66,46,0.45), 0 8px 18px rgba(0,0,0,0.28);
+  overflow: hidden;
+}
+
+#game-grid::before,
+#game-grid::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#game-grid::before {
+  inset: 0;
+  border-radius: 16px;
+  background: repeating-linear-gradient(105deg, transparent 0 42px, rgba(174,238,216,0.16) 43px 45px, transparent 46px 86px);
+  mix-blend-mode: screen;
+  animation: riverFlow 7s linear infinite;
+}
+
+@keyframes riverFlow {
+  from { background-position: 0 0; }
+  to { background-position: 150px 80px; }
+}
+
+#game-grid::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background: repeating-linear-gradient(120deg, #2ecc71 0 5px, #1e8449 5px 9px, #82e0aa 9px 12px, transparent 12px 22px);
+  opacity: 0.9;
+}
+
+#game-grid.solo {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#game-grid.duel {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  #game-grid.duel {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+#game-grid.squad {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.player-arena {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, #5dade2 0%, #2980b9 55%, #1b4f72 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.player-theme-1 {
+  background: radial-gradient(circle at 50% 30%, #5dade2 0%, #2980b9 55%, #1b4f72 100%);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.player-theme-2 {
+  background: radial-gradient(circle at 50% 30%, #76d7c4 0%, #16a085 55%, #0b5345 100%);
+  border-color: rgba(213, 245, 227, 0.65);
+}
+
+.player-theme-3 {
+  background: radial-gradient(circle at 50% 30%, #f8c471 0%, #e67e22 55%, #873600 100%);
+  border-color: rgba(254, 243, 199, 0.7);
+}
+
+.player-theme-4 {
+  background: radial-gradient(circle at 50% 30%, #bb8fce 0%, #8e44ad 55%, #512e5f 100%);
+  border-color: rgba(243, 229, 245, 0.7);
+}
+
+.player-theme-1 .p-tag { background: #2471a3; }
+.player-theme-2 .p-tag { background: #117864; }
+.player-theme-3 .p-tag { background: #ba4a00; }
+.player-theme-4 .p-tag { background: #6c3483; }
+
+.pond-canvas-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pond-overlay-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  animation: fallRain 0.5s linear infinite;
+}
+
+@keyframes fallRain {
+  0% { transform: translateY(-20px); opacity: 0; }
+  30% { opacity: 0.8; }
+  100% { transform: translateY(calc(100 * min(var(--vh, 1vh), 1vh))); opacity: 0; }
+}
+
+.flash-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 15;
+}
+
+.arena-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  min-height: 48px;
+}
+
+.p-tag {
+  font-weight: 900;
+  font-size: 0.95rem;
+  background: #27ae60;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+.p-stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.p-score {
+  color: #d35400;
+}
+
+.p-lives {
+  color: #c0392b;
+  letter-spacing: 2px;
+}
+
+.p-combo {
+  background: #f39c12;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  animation: pulseCombo 1s infinite alternate;
+}
+
+@keyframes pulseCombo {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.arena-timer-bar {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.arena-timer-fill {
+  width: 100%;
+  height: 100%;
+  background: #f1c40f;
+  transition: width 0.1s linear, background-color 0.3s ease;
+}
+
+.arena-question-box {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  margin: 6px 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-subtle);
+  border-left: 5px solid #27ae60;
+  min-height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.q-progress-info {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  font-weight: 700;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.q-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1.25;
+}
+
+.arena-pond {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.leaves-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  flex: 1;
+  align-items: center;
+}
+
+.leaf-station {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-height: 80px;
+}
+
+.leaf-station:hover:not(.locked) {
+  transform: scale(1.04);
+}
+
+.leaf-station.locked {
+  cursor: default;
+}
+
+.lilypad-svg-wrap {
+  width: 76px;
+  height: 76px;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.25));
+  animation: lilySway 4s ease-in-out infinite alternate;
+  position: absolute;
+  z-index: 1;
+}
+
+.leaf-station:nth-child(2) .lilypad-svg-wrap { animation-delay: -1s; }
+.leaf-station:nth-child(3) .lilypad-svg-wrap { animation-delay: -2s; }
+.leaf-station:nth-child(4) .lilypad-svg-wrap { animation-delay: -3s; }
+
+@keyframes lilySway {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-4px) rotate(2deg); }
+}
+
+.leaf-card-btn {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  padding: 6px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 180px;
+  text-align: center;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  font-weight: 700;
+  color: #1e3799;
+  line-height: 1.2;
+  pointer-events: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.leaf-station.bounce-correct .leaf-card-btn {
+  background: #2ecc71;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.08);
+}
+
+.leaf-station.sink-wrong {
+  animation: sinkAndShake 0.9s forwards ease-in-out;
+}
+
+@keyframes sinkAndShake {
+  0% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-4px, 6px) scale(0.95); }
+  50% { transform: translate(4px, 14px) scale(0.85); opacity: 0.7; }
+  100% { transform: translate(0, 24px) scale(0.7); opacity: 0.2; }
+}
+
+.frog-home-area {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+}
+
+.home-leaf {
+  width: 84px;
+  height: 84px;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3));
+}
+
+.frog-actor {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  z-index: 10;
+  pointer-events: none;
+  transform-origin: center bottom;
+  transition: filter 0.2s ease;
+}
+
+.frog-actor.idle {
+  animation: frogBreathe 2s ease-in-out infinite;
+}
+
+@keyframes frogBreathe {
+  0%, 100% { transform: scale(1, 1); }
+  50% { transform: scale(1.04, 0.96); }
+}
+
+.frog-actor.happy {
+  animation: frogCelebrate 0.5s ease infinite alternate;
+}
+
+@keyframes frogCelebrate {
+  0% { transform: translateY(0) scale(1.05, 0.95); }
+  100% { transform: translateY(-16px) scale(0.95, 1.05); }
+}
+
+.frog-actor.sad {
+  animation: frogSad 0.8s forwards ease;
+}
+
+@keyframes frogSad {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.8, 0.8) translateY(10px); }
+  100% { transform: scale(0.6) translateY(24px); opacity: 0.3; }
+}
+
+.arena-feedback-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 18px;
+  padding: 14px 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 86%;
+  max-width: 320px;
+  z-index: 30;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.25s ease;
+}
+
+.arena-feedback-modal.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.feedback-status {
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.feedback-status.correct { color: #27ae60; }
+.feedback-status.wrong { color: #e74c3c; }
+
+.feedback-exp {
+  font-size: 0.85rem;
+  color: #34495e;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+#result-screen {
+  background: radial-gradient(circle at center, #74ebd5, var(--pond-deep) 90%);
+}
+
+.result-card {
+  background: var(--card-bg);
+  padding: 32px 36px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  max-width: 700px;
+  width: 94%;
+  text-align: center;
+  border: 4px solid #fff;
+  max-height: calc(90 * min(var(--vh, 1vh), 1vh));
+  overflow-y: auto;
+}
+
+.result-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #27ae60;
+  margin-bottom: 8px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+
+.leaderboard-table th {
+  background: #e8f8f0;
+  color: #1e8449;
+  padding: 8px;
+  font-weight: 800;
+}
+
+.leaderboard-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ecf0f1;
+  font-weight: 600;
+}
+
+.advice-box {
+  background: #fef9e7;
+  border-left: 4px solid #f1c40f;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #7d6608;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: var(--shadow-soft);
+  max-height: calc(85 * min(var(--vh, 1vh), 1vh));
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #7f8c8d;
+  font-weight: 700;
+  padding: 0 4px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-group select, .form-group input[type="range"] {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1.5px solid #bdc3c7;
+  font-weight: 700;
+}
+
+.pause-menu-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.key-badge {
+  display: inline-block;
+  background: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.7rem;
+  font-family: monospace;
+  margin-left: 4px;
+  color: #2c3e50;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/8de366929c5f3b48.data_sdk.js" type="text/javascript" integrity="sha512-TyQ8k8cZj66xe/aENmn6RyZpdOFZXbAo5+KBG3PeFM+Q4qMTHU8xAqmq4ADClNfPrstgQYV6OzZHwLTnElzB2g=="></script>
+  <script src="/_sdk/94916171342f3214.editing_sdk.js" type="text/javascript" integrity="sha512-iD6yxTksfey/7N3Df0f52UtQsuvEgQYXQKioLwfyua/wCe7br8wUuc/pDNnGdXhJ/6CJKJ9sPcWHBNlAjOMhEQ=="></script>
+  <script src="/_sdk/765e1fea0cec97ce.resizing_sdk.js" type="text/javascript" integrity="sha512-IRTJnqww0+HQ5V/LlWEQrlD5SrYHaVvaeVoNe8HYQXoaguzUGheSd9+n9s6WOgaTcEH0g37DuINHZ9aqfzWjlw=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(27, 79, 114);">
+  <div id="app-container">
+   <div id="global-controls"><button id="btn-sound-toggle" class="icon-btn" title="Aktifkan/Matikan Audio">🔊</button> <button id="btn-help-global" class="icon-btn" title="Petunjuk Bermain">❓</button> <button id="btn-settings-global" class="icon-btn" title="Pengaturan Guru">⚙</button> <button id="btn-fullscreen" class="icon-btn" title="Layar Penuh">⛶</button> <button id="btn-pause-global" class="icon-btn hidden" title="Jeda Permainan">⏸</button>
+   </div>
+   <div id="landing-screen" class="screen" data-template-id="landing-screen" style="background: radial-gradient(rgb(116, 235, 213), rgb(159, 172, 230), rgb(27, 79, 114));">
+    <div class="logo-card" data-template-id="logo-card" style="background: rgba(255, 255, 255, 0.94);"><img data-template-id="school-logo" class="canva-image" loading="lazy" style="width: 112px; height: 112px; object-fit: contain; margin-bottom: 10px;" src="https://imgur.com/3vecmaz.png" alt="Logo Yayasan Pesantren Islam Al Azhar">
+     <h1 class="title-main canva-text" data-template-id="title-main" style="color: rgb(30, 132, 73); font-weight: 900; font-style: normal; font-size: 36px;">FROGGY 
+LOMPAT PERNAPASAN</h1>
+     <h2 class="subtitle-main canva-text" data-template-id="subtitle-main" style="color: rgb(44, 62, 80); font-weight: 600; font-style: normal; font-size: 20px;">Yuk Kenali Sistem Pernapasan Manusia!</h2>
+     <div class="landing-frog-stage" id="landing-frog-mount"></div>
+     <p data-template-id="landing-desc" class="canva-text" style="font-size: 14px; font-weight: 600; margin: 6px 0px 14px; color: rgb(52, 73, 94); font-style: normal;">Bantu katak melompat ke daun jawaban yang benar untuk menjelajahi organ pernapasan tubuh kita!</p>
+     <div class="menu-actions"><button id="btn-start-game" class="btn-cta canva-button" data-template-id="btn-start-game" style="background: linear-gradient(135deg, rgb(46, 204, 113), rgb(39, 174, 96)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 20px;">▶ MULAI BERMAIN</button> <button id="btn-open-guide" class="btn-secondary canva-button" data-template-id="btn-open-guide" style="color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">Cara Bermain</button>
+     </div>
+     <div class="author-tag" data-template-id="author-tag-landing" style="color: rgb(86, 101, 115); font-size: 14px;">
+      Dibuat oleh: <strong>Abdur Rahim, S.Pd.I</strong><br>
+       Guru SDI Al Azhar 23 Jatikramat
+     </div>
+    </div>
+   </div>
+   <div id="mode-screen" class="screen hidden">
+    <div style="text-align: center; margin-bottom: 10px;">
+     <h2 data-template-id="mode-screen-title" class="canva-text" style="font-size: 32px; font-weight: 900; text-shadow: rgb(255, 255, 255) 1px 1px 0px; color: rgb(21, 67, 96); font-style: normal;">PILIH MODE BERMAIN</h2>
+     <p data-template-id="mode-screen-subtitle" class="canva-text" style="font-weight: 700; color: rgb(27, 79, 114); font-style: normal; font-size: 18px;">Mau berpetualang sendiri atau adu cepat bersama teman?</p>
+    </div>
+    <div class="mode-container">
+     <div class="mode-card canva-card" data-mode="solo" data-template-id="mode-card-solo" style="background: rgba(255, 255, 255, 0.94);">
+      <div class="mode-icon">
+       👤
+      </div>
+      <div>
+       <div class="mode-title canva-text" data-template-id="mode-solo-title" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 22px;">SOLO</div>
+       <div class="mode-desc canva-text" data-template-id="mode-solo-desc" style="color: rgb(86, 101, 115); font-weight: 600; font-style: normal; font-size: 16px;">1 Pemain (Layar Penuh)</div>
+      </div>
+     </div>
+     <div class="mode-card canva-card" data-mode="duel" data-template-id="mode-card-duel" style="background: rgba(255, 255, 255, 0.94);">
+      <div class="mode-icon">
+       👥
+      </div>
+      <div>
+       <div class="mode-title canva-text" data-template-id="mode-duel-title" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 22px;">DUEL</div>
+       <div class="mode-desc canva-text" data-template-id="mode-duel-desc" style="color: rgb(86, 101, 115); font-weight: 600; font-style: normal; font-size: 14px;">2 Pemain (Layar Belah)</div>
+      </div>
+     </div>
+     <div class="mode-card canva-card" data-mode="squad" data-template-id="mode-card-squad" style="background: rgba(255, 255, 255, 0.94);">
+      <div class="mode-icon">
+       👥👥
+      </div>
+      <div>
+       <div class="mode-title canva-text" data-template-id="mode-squad-title" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 22px;">SQUAD</div>
+       <div class="mode-desc canva-text" data-template-id="mode-squad-desc" style="color: rgb(86, 101, 115); font-weight: 600; font-style: normal; font-size: 14px;">4 Pemain (Grid 2x2)</div>
+      </div>
+     </div>
+    </div><button id="btn-back-to-landing" class="btn-secondary canva-button" data-template-id="btn-back-to-landing" style="margin-top: 24px; color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">← Kembali</button>
+    <div class="author-tag canva-text" data-template-id="author-tag-mode" style="color: rgb(255, 255, 255); font-size: 14px;">
+     Dibuat oleh: Abdur Rahim, S.Pd.I<br>
+      Guru SDI Al Azhar 23 Jatikramat
+    </div>
+   </div>
+   <div id="name-screen" class="screen hidden">
+    <div class="name-container">
+     <h2 data-template-id="name-screen-title" class="canva-text" style="color: rgb(27, 79, 114); font-weight: 900; font-style: normal; font-size: 29px;">SIAPA YANG BERMAIN?</h2>
+     <p data-template-id="name-screen-subtitle" class="canva-text" style="color: rgb(86, 101, 115); font-weight: 600; font-style: normal; font-size: 18px;">Masukkan nama pemain atau nama tim sebelum mulai.</p>
+     <div id="player-name-fields" class="player-name-fields">
+      <div class="player-name-field" data-player-count="1"><label for="player-name-1" data-template-id="player-name-label-1" class="canva-text" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 14px;">Nama Pemain 1/Tim 1</label><input id="player-name-1" data-template-id="player-name-input-1" class="canva-input" type="text" maxlength="64" autocomplete="off" placeholder="Masukkan nama pemain 1" style="color: rgb(44, 62, 80); font-weight: 700; font-style: normal; font-size: 16px;">
+      </div>
+      <div class="player-name-field hidden" data-player-count="2"><label for="player-name-2" data-template-id="player-name-label-2" class="canva-text" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 14px;">Nama Pemain 2/Tim 2</label><input id="player-name-2" data-template-id="player-name-input-2" class="canva-input" type="text" maxlength="64" autocomplete="off" placeholder="Masukkan nama pemain 2" style="color: rgb(44, 62, 80); font-weight: 700; font-style: normal; font-size: 16px;">
+      </div>
+      <div class="player-name-field hidden" data-player-count="3"><label for="player-name-3" data-template-id="player-name-label-3" class="canva-text" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 14px;">Nama Pemain 3</label><input id="player-name-3" data-template-id="player-name-input-3" class="canva-input" type="text" maxlength="64" autocomplete="off" placeholder="Masukkan nama pemain 3" style="color: rgb(44, 62, 80); font-weight: 700; font-style: normal; font-size: 16px;">
+      </div>
+      <div class="player-name-field hidden" data-player-count="4"><label for="player-name-4" data-template-id="player-name-label-4" class="canva-text" style="color: rgb(27, 79, 114); font-weight: 800; font-style: normal; font-size: 14px;">Nama Pemain 4</label><input id="player-name-4" data-template-id="player-name-input-4" class="canva-input" type="text" maxlength="64" autocomplete="off" placeholder="Masukkan nama pemain 4" style="color: rgb(44, 62, 80); font-weight: 700; font-style: normal; font-size: 16px;">
+      </div>
+     </div><button id="btn-start-named-game" class="btn-cta canva-button" data-template-id="btn-start-named-game" style="width: 100%; margin-top: 16px; font-size: 18px; background: linear-gradient(135deg, rgb(46, 204, 113), rgb(39, 174, 96)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal;">▶ MULAI PERMAINAN</button> <button id="btn-back-to-mode" class="btn-secondary canva-button" data-template-id="btn-back-to-mode" style="margin-top: 10px; color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">← Pilih Mode Lain</button>
+    </div>
+   </div>
+   <div id="game-screen" class="screen hidden">
+    <div id="game-grid" class="solo"></div>
+   </div>
+   <div id="result-screen" class="screen hidden" data-template-id="result-screen" style="background: radial-gradient(rgb(116, 235, 213), rgb(27, 79, 114));">
+    <div class="result-card" data-template-id="result-card" style="background: rgba(255, 255, 255, 0.94);">
+     <div style="font-size: 3rem; margin-bottom: 4px;">
+      🎉
+     </div>
+     <h2 class="result-title canva-text" data-template-id="result-title" style="color: rgb(39, 174, 96); font-weight: 900; font-style: normal; font-size: 29px;">PERMAINAN SELESAI!</h2>
+     <div id="result-advice" class="advice-box" data-template-id="result-advice-box" style="background: rgb(254, 249, 231); color: rgb(125, 102, 8);"></div>
+     <table class="leaderboard-table" id="result-table">
+      <thead>
+       <tr>
+        <th data-template-id="th-player" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Pemain</th>
+        <th data-template-id="th-score" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Skor</th>
+        <th data-template-id="th-correct" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Benar</th>
+        <th data-template-id="th-wrong" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Salah</th>
+        <th data-template-id="th-accuracy" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Akurasi</th>
+        <th data-template-id="th-combo" class="canva-text" style="color: rgb(30, 132, 73); font-weight: 800; font-style: normal; font-size: 18px;">Combo</th>
+       </tr>
+      </thead>
+      <tbody id="result-table-body"></tbody>
+     </table>
+     <div style="display: flex; gap: 10px; justify-content: center; margin-top: 14px;"><button id="btn-restart-game" class="btn-cta canva-button" data-template-id="btn-restart-game" style="font-size: 18px; padding: 10px 20px; background: linear-gradient(135deg, rgb(46, 204, 113), rgb(39, 174, 96)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal;">🔄 Main Lagi</button> <button id="btn-menu-from-result" class="btn-secondary canva-button" data-template-id="btn-menu-from-result" style="color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">🏠 Menu Utama</button>
+     </div>
+     <div class="author-tag canva-text" data-template-id="author-tag-result" style="margin-top: 14px; color: rgb(86, 101, 115); font-size: 14px;">
+      Dibuat oleh: <strong>Abdur Rahim, S.Pd.I</strong><br>
+       Guru SDI Al Azhar 23 Jatikramat
+     </div>
+    </div>
+   </div>
+   <div id="help-modal" class="modal-backdrop hidden">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h3 class="modal-title canva-text" data-template-id="help-modal-title" style="color: rgb(44, 62, 80); font-weight: 800; font-style: normal; font-size: 20px;">❓ Cara Bermain</h3><button class="close-btn" data-close="help-modal">×</button>
+     </div>
+     <div style="font-size: 0.95rem; line-height: 1.5; color: #2c3e50;">
+      <ol style="margin-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+       <li><strong>Baca Pertanyaan:</strong> Pahami materi seputar sistem pernapasan manusia yang tampil di atas.</li>
+       <li><strong>Pilih Daun Teratai:</strong> Setiap daun berisi satu pilihan jawaban (A, B, C, D).</li>
+       <li><strong>Katak Melompat:</strong> Sentuh/klik daun pilihanmu. Katak lucu akan melompat ke daun tersebut.</li>
+       <li><strong>Jawaban Benar:</strong> Daun memantul gembira, katak menari ceria, dan kamu mendapat +100 poin (plus bonus cepat &amp; combo)!</li>
+       <li><strong>Jawaban Salah:</strong> Daun akan bergoyang dan tenggelam ke kolam. Coba lagi atau pelajari pembahasannya.</li>
+      </ol>
+      <div style="margin-top: 14px; background: #e8f8f5; padding: 10px; border-radius: 10px; font-size: 0.85rem;"><strong>Dukungan Keyboard:</strong><br>
+        • <strong>Solo:</strong> Tombol [1][2][3][4] atau [A][S][D][F]<br>
+        • <strong>Duel P1:</strong> [A][S][D][F] | <strong>P2:</strong> [J][K][L][;]
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="settings-modal" class="modal-backdrop hidden">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h3 class="modal-title canva-text" data-template-id="settings-modal-title" style="color: rgb(44, 62, 80); font-weight: 800; font-style: normal; font-size: 20px;">⚙ Pengaturan Guru</h3><button class="close-btn" data-close="settings-modal">×</button>
+     </div>
+     <div class="form-group"><label for="cfg-questions-count">Jumlah Soal / Babak:</label> <select id="cfg-questions-count"> <option value="10">10 Soal</option> <option value="15">15 Soal</option> <option value="20" selected="">20 Soal</option> <option value="30">30 Soal</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-use-timer">Gunakan Timer:</label> <select id="cfg-use-timer"> <option value="true" selected="">Aktif (ON)</option> <option value="false">Mati (OFF)</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-timer-seconds">Waktu per Soal:</label> <select id="cfg-timer-seconds"> <option value="10">10 Detik</option> <option value="15" selected="">15 Detik</option> <option value="20">20 Detik</option> <option value="30">30 Detik</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-use-lives">Sistem Nyawa (Hati):</label> <select id="cfg-use-lives"> <option value="true" selected="">Aktif (ON)</option> <option value="false">Mati / Bebas (OFF)</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-start-lives">Jumlah Nyawa:</label> <select id="cfg-start-lives"> <option value="1">1 Nyawa</option> <option value="3" selected="">3 Nyawa</option> <option value="5">5 Nyawa</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-random-q">Acak Urutan Soal:</label> <select id="cfg-random-q"> <option value="true" selected="">Ya (ON)</option> <option value="false">Tidak (OFF)</option> </select>
+     </div>
+     <div class="form-group"><label for="cfg-bgm-volume">Volume Musik (BGM):</label> <input type="range" id="cfg-bgm-volume" min="0" max="1" step="0.1" value="0.5">
+     </div>
+     <div class="form-group"><label for="cfg-sfx-volume">Volume Efek Suara (SFX):</label> <input type="range" id="cfg-sfx-volume" min="0" max="1" step="0.1" value="0.7">
+     </div><button id="btn-save-settings" class="btn-cta canva-button" data-template-id="btn-save-settings" style="width: 100%; margin-top: 10px; font-size: 18px; padding: 10px; background: linear-gradient(135deg, rgb(46, 204, 113), rgb(39, 174, 96)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal;">Simpan Pengaturan</button>
+    </div>
+   </div>
+   <div id="pause-modal" class="modal-backdrop hidden">
+    <div class="modal-content" style="text-align: center;">
+     <h3 class="modal-title canva-text" data-template-id="pause-modal-title" style="margin-bottom: 14px; color: rgb(44, 62, 80); font-weight: 800; font-style: normal; font-size: 20px;">⏸ Permainan Dijeda</h3>
+     <div class="pause-menu-actions"><button id="btn-resume-game" class="btn-cta canva-button" data-template-id="btn-resume-game" style="padding: 10px; background: linear-gradient(135deg, rgb(46, 204, 113), rgb(39, 174, 96)); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">▶ Lanjutkan</button> <button id="btn-restart-from-pause" class="btn-secondary canva-button" data-template-id="btn-restart-from-pause" style="color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">↻ Ulangi Babak Ini</button> <button id="btn-menu-from-pause" class="btn-secondary canva-button" data-template-id="btn-menu-from-pause" style="color: rgb(39, 174, 96); font-weight: 700; font-style: normal; font-size: 18px;">⌂ Menu Utama</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+const CONFIG = {
+  questionCount: 20,
+  useTimer: true,
+  timerSeconds: 15,
+  useLives: true,
+  startLives: 3,
+  randomQuestions: true,
+  bgmVolume: 0.5,
+  sfxVolume: 0.7,
+  audioMuted: false
+};
+
+(function loadSavedConfig() {
+  try {
+    const saved = localStorage.getItem('FROGGY_CONFIG');
+    if (saved) {
+      Object.assign(CONFIG, JSON.parse(saved));
+    }
+  } catch (e) {}
+})();
+
+function saveGlobalConfig() {
+  try {
+    localStorage.setItem('FROGGY_CONFIG', JSON.stringify(CONFIG));
+  } catch (e) {}
+}
+
+const QUESTION_BANK = [
+  {
+    question: "Organ tempat terjadinya pertukaran oksigen dan karbon dioksida di dalam paru-paru adalah...",
+    options: ["Alveolus", "Trakea", "Bronkus", "Laring"],
+    correct: 0,
+    explanation: "Alveolus merupakan kantung udara sangat halus tempat pertukaran oksigen dan karbon dioksida."
+  },
+  {
+    question: "Udara pertama kali masuk ke dalam sistem pernapasan manusia melalui organ...",
+    options: ["Mulut", "Hidung", "Kerongkongan", "Tenggorokan"],
+    correct: 1,
+    explanation: "Hidung adalah pintu utama masuknya udara pernapasan ke dalam tubuh manusia."
+  },
+  {
+    question: "Rambut halus yang terdapat di dalam rongga hidung berfungsi untuk...",
+    options: ["Menghangatkan udara", "Menyaring debu dan kotoran", "Membunuh kuman penyakit", "Menghasilkan lendir"],
+    correct: 1,
+    explanation: "Rambut hidung bekerja seperti saringan halus untuk menahan kotoran dan debu."
+  },
+  {
+    question: "Selaput lendir pada rongga hidung mempunyai peran penting yaitu...",
+    options: ["Mengatur suhu dan kelembapan udara", "Menghancurkan kuman seketika", "Memompa udara ke paru-paru", "Menghasilkan suara"],
+    correct: 0,
+    explanation: "Selaput lendir melembapkan sekaligus menyesuaikan suhu udara pernapasan dengan suhu tubuh kita."
+  },
+  {
+    question: "Percabangan dari tenggorokan (trakea) yang menuju ke paru-paru kanan dan kiri dinamakan...",
+    options: ["Alveolus", "Bronkiolus", "Bronkus", "Faring"],
+    correct: 2,
+    explanation: "Bronkus merupakan dua cabang batang tenggorokan yang masing-masing menuju paru-paru."
+  },
+  {
+    question: "Cabang-cabang yang lebih kecil dan halus dari organ bronkus disebut...",
+    options: ["Bronkiolus", "Alveolus", "Laring", "Diafragma"],
+    correct: 0,
+    explanation: "Bronkiolus adalah cabang ranting yang lebih kecil dari saluran bronkus."
+  },
+  {
+    question: "Organ yang menghubungkan rongga hidung dengan laring dan kerongkongan adalah...",
+    options: ["Faring", "Trakea", "Alveolus", "Bronkus"],
+    correct: 0,
+    explanation: "Faring (tekak) adalah hulu saluran pernapasan dan pencernaan yang menghubungkan hidung dan mulut."
+  },
+  {
+    question: "Pita suara manusia terletak pada salah satu organ pernapasan, yaitu...",
+    options: ["Trakea", "Laring", "Faring", "Bronkus"],
+    correct: 1,
+    explanation: "Laring (pangkal tenggorokan) memiliki pita suara yang bergetar saat kita berbicara."
+  },
+  {
+    question: "Batang tenggorokan yang berbentuk pipa tersusun atas cincin-cincin tulang rawan disebut...",
+    options: ["Esofagus", "Trakea", "Bronkus", "Alveolus"],
+    correct: 1,
+    explanation: "Trakea adalah batang pipa napas berotot dan bertulang rawan yang kokoh."
+  },
+  {
+    question: "Gas yang sangat dibutuhkan tubuh saat kita menghirup udara segar adalah...",
+    options: ["Karbon dioksida", "Nitrogen", "Oksigen", "Metana"],
+    correct: 2,
+    explanation: "Oksigen (O2) diserap tubuh untuk proses pembakaran energi di dalam sel-sel tubuh."
+  },
+  {
+    question: "Gas sisa metabolisme yang dikeluarkan oleh paru-paru saat mengembuskan napas adalah...",
+    options: ["Karbon dioksida", "Oksigen murni", "Helium", "Hidrogen"],
+    correct: 0,
+    explanation: "Karbon dioksida (CO2) adalah gas sisa pembakaran yang wajib dikeluarkan dari tubuh."
+  },
+  {
+    question: "Proses menghirup udara kaya oksigen ke dalam paru-paru dinamakan proses...",
+    options: ["Ekspirasi", "Inspirasi", "Evaporasi", "Kondensasi"],
+    correct: 1,
+    explanation: "Inspirasi (inhalasi) adalah fase menarik atau memasukkan udara ke paru-paru."
+  },
+  {
+    question: "Proses mengembuskan udara keluar dari paru-paru disebut proses...",
+    options: ["Ekspirasi", "Inspirasi", "Sirkulasi", "Asimilasi"],
+    correct: 0,
+    explanation: "Ekspirasi adalah fase melepaskan atau mengembuskan udara keluar dari tubuh."
+  },
+  {
+    question: "Skat otot pemisah antara rongga dada dan rongga perut yang berperan saat bernapas adalah...",
+    options: ["Jantung", "Diafragma", "Lambung", "Hati"],
+    correct: 1,
+    explanation: "Diafragma adalah otot utama berbentuk kubah di bawah paru-paru yang mengatur pernapasan."
+  },
+  {
+    question: "Saat proses inspirasi pernapasan perut berlangsung, posisi diafragma akan...",
+    options: ["Melengkung ke atas", "Mendatar / turun", "Tetap diam", "Menyempit"],
+    correct: 1,
+    explanation: "Saat menarik napas, otot diafragma berkontraksi dan bergerak mendatar sehingga rongga dada membesar."
+  },
+  {
+    question: "Saat kita mengembuskan napas (ekspirasi), rongga dada manusia akan...",
+    options: ["Membesar", "Mengecil", "Terisi udara", "Mengembang kencang"],
+    correct: 1,
+    explanation: "Rongga dada mengecil karena diafragma relaksasi dan udara terdorong keluar."
+  },
+  {
+    question: "Manakah urutan jalur udara pernapasan saat masuk yang paling tepat?",
+    options: [
+      "Hidung - Tenggorokan - Bronkus - Alveolus",
+      "Hidung - Alveolus - Bronkus - Tenggorokan",
+      "Tenggorokan - Hidung - Bronkus - Alveolus",
+      "Hidung - Bronkus - Tenggorokan - Alveolus"
+    ],
+    correct: 0,
+    explanation: "Udara masuk dari hidung, melewati tenggorokan (trakea), masuk ke cabang bronkus, lalu ke alveolus."
+  },
+  {
+    question: "Paru-paru dilindungi oleh selaput pembungkus tipis ganda yang disebut...",
+    options: ["Perikardium", "Pleura", "Meninges", "Periosteum"],
+    correct: 1,
+    explanation: "Pleura adalah selaput pelindung paru-paru yang menjaga agar tidak terluka saat bergesekan."
+  },
+  {
+    question: "Zat berbahaya dalam asap rokok yang dapat membuat seseorang kecanduan adalah...",
+    options: ["Nikotin", "Tar", "Karbon monoksida", "Klorin"],
+    correct: 0,
+    explanation: "Nikotin adalah zat adiktif pada rokok yang menyebabkan ketergantungan."
+  },
+  {
+    question: "Zat hitam pekat pada asap rokok yang dapat mengendap dan merusak dinding paru-paru adalah...",
+    options: ["Oksigen", "Tar", "Uap air", "Kalsium"],
+    correct: 1,
+    explanation: "Tar berupa partikel lengket cokelat kehitaman yang mengotori saluran pernapasan."
+  },
+  {
+    question: "Kebiasaan baik berikut ini yang dapat menjaga kesehatan organ pernapasan kita adalah...",
+    options: ["Tidur larut malam", "Rutin berolahraga di udara bersih", "Bermain di dekat asap bakaran sampah", "Jarang minum air putih"],
+    correct: 1,
+    explanation: "Olahraga teratur melatih kapasitas paru-paru dan melancarkan sirkulasi oksigen segar."
+  },
+  {
+    question: "Alat pelindung yang sebaiknya dipakai saat berada di jalan raya berdebu atau polusi adalah...",
+    options: ["Kacamata hitam", "Masker penutup hidung & mulut", "Topi bundar", "Sarung tangan"],
+    correct: 1,
+    explanation: "Masker membantu menyaring partikel debu halus dan polutan berbahaya agar tidak terhirup."
+  },
+  {
+    question: "Gangguan penyempitan saluran pernapasan yang sering kambuh akibat alergi udara dingin atau debu adalah...",
+    options: ["Asma", "Sariawan", "Maag", "Tifus"],
+    correct: 0,
+    explanation: "Asma ditandai dengan saluran napas yang meradang, membengkak, dan menyempit sehingga penderita sesak."
+  },
+  {
+    question: "Penyakit peradangan pada saluran cabang paru-paru (bronkus) disebut...",
+    options: ["Bronkitis", "Faringitis", "Sinusitis", "Gastritis"],
+    correct: 0,
+    explanation: "Bronkitis adalah peradangan pada dinding cabang bronkus akibat infeksi atau debu."
+  },
+  {
+    question: "Tindakan ventilasi yang baik di dalam ruang kelas bertujuan untuk...",
+    options: ["Membuat ruangan menjadi gelap", "Menjaga pergantian sirkulasi udara bersih", "Menghalangi sinar matahari", "Menahan bau"],
+    correct: 1,
+    explanation: "Sirkulasi udara yang baik memastikan pasokan oksigen melimpah dan udara pengap terbuang."
+  },
+  {
+    question: "Tanaman hijau di sekitar sekolah sangat bermanfaat bagi pernapasan kita karena menghasilkan...",
+    options: ["Karbon monoksida", "Gas metana", "Oksigen segar", "Uap belerang"],
+    correct: 2,
+    explanation: "Melalui fotosintesis pada siang hari, tanaman menyerap CO2 dan melepaskan oksigen segar."
+  },
+  {
+    question: "Saat seseorang sedang tersedak makanan, hal itu terjadi karena...",
+    options: [
+      "Makanan masuk ke saluran pernapasan (laring/trakea)",
+      "Makanan terlalu cepat dicerna lambung",
+      "Mulut memproduksi terlalu banyak air liur",
+      "Hidung tersumbat oleh debu"
+    ],
+    correct: 0,
+    explanation: "Katup epiglotis terlambat menutup saat berbicara sambil makan sehingga makanan tersasar ke pipa napas."
+  },
+  {
+    question: "Organ pernapasan manusia yang berjumlah sepasang di dalam rongga dada adalah...",
+    options: ["Laring", "Paru-paru", "Trakea", "Faring"],
+    correct: 1,
+    explanation: "Manusia memiliki sepasang paru-paru, yaitu paru-paru kanan (tiga gelambir) dan kiri (dua gelambir)."
+  },
+  {
+    question: "Penularan virus flu dan batuk dapat dicegah dengan menerapkan etika bersin yaitu...",
+    options: [
+      "Bersin menghadap wajah teman",
+      "Menutup hidung dan mulut dengan lengan atas bagian dalam atau tisu",
+      "Membuka mulut selebar mungkin",
+      "Tidak perlu ditutup"
+    ],
+    correct: 1,
+    explanation: "Menutup mulut saat batuk atau bersin mencegah percikan droplet menular ke orang lain."
+  },
+  {
+    question: "Mengapa bernapas lewat hidung jauh lebih sehat dibandingkan bernapas lewat mulut?",
+    options: [
+      "Karena mulut tidak memiliki gigi untuk bernapas",
+      "Hidung memiliki rambut dan lendir penyaring kotoran serta pengatur suhu",
+      "Udara lewat mulut terlalu lambat masuk",
+      "Hidung memiliki paru-paru cadangan"
+    ],
+    correct: 1,
+    explanation: "Hidung dilengkapi sistem filtrasi bertingkat (rambut silia dan lendir) yang tidak dimiliki rongga mulut."
+  }
+];
+
+class SoundSynth {
+  constructor() {
+    this.ctx = null;
+    this.bgmTimer = null;
+    this.isBgmPlaying = false;
+  }
+
+  initContext() {
+    if (!this.ctx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        this.ctx = new AudioContext();
+      }
+    }
+    if (this.ctx && this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+  }
+
+  playJump() {
+    if (CONFIG.audioMuted || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      [220, 330, 520].forEach((freq, idx) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.045);
+        gain.gain.setValueAtTime(0.2 * CONFIG.sfxVolume, now + idx * 0.045);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.045 + 0.16);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now + idx * 0.045);
+        osc.stop(now + idx * 0.045 + 0.16);
+      });
+    } catch (e) {}
+  }
+
+  playCorrect() {
+    if (CONFIG.audioMuted || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+      notes.forEach((freq, idx) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.055);
+        gain.gain.setValueAtTime(0.3 * CONFIG.sfxVolume, now + idx * 0.055);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.055 + 0.24);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now + idx * 0.055);
+        osc.stop(now + idx * 0.055 + 0.24);
+      });
+    } catch (e) {}
+  }
+
+  playWrong() {
+    if (CONFIG.audioMuted || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(220, now);
+      osc.frequency.linearRampToValueAtTime(110, now + 0.35);
+      gain.gain.setValueAtTime(0.3 * CONFIG.sfxVolume, now);
+      gain.gain.linearRampToValueAtTime(0.01, now + 0.35);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.35);
+    } catch (e) {}
+  }
+
+  playSplash() {
+    if (CONFIG.audioMuted || !this.ctx) return;
+    try {
+      const bufferSize = this.ctx.sampleRate * 0.25;
+      const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1;
+      }
+      const noise = this.ctx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = this.ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(1200, this.ctx.currentTime);
+      filter.frequency.linearRampToValueAtTime(200, this.ctx.currentTime + 0.25);
+      const gain = this.ctx.createGain();
+      gain.gain.setValueAtTime(0.4 * CONFIG.sfxVolume, this.ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.01, this.ctx.currentTime + 0.25);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.ctx.destination);
+      noise.start();
+    } catch (e) {}
+  }
+
+  playClick() {
+    if (CONFIG.audioMuted || !this.ctx) return;
+    try {
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(800, now);
+      gain.gain.setValueAtTime(0.15 * CONFIG.sfxVolume, now);
+      gain.gain.linearRampToValueAtTime(0.01, now + 0.05);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.05);
+    } catch (e) {}
+  }
+
+  startBGM() {
+    if (this.isBgmPlaying || !this.ctx) return;
+    this.isBgmPlaying = true;
+    const melody = [261.63, 329.63, 392.00, 523.25, 659.25, 523.25, 392.00, 329.63];
+    let noteIdx = 0;
+
+    const playNextBar = () => {
+      if (!this.isBgmPlaying || CONFIG.audioMuted || CONFIG.bgmVolume <= 0.01) return;
+      try {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = melody[noteIdx % melody.length];
+        const now = this.ctx.currentTime;
+        gain.gain.setValueAtTime(0.055 * CONFIG.bgmVolume, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.4);
+        noteIdx++;
+      } catch (e) {}
+    };
+
+    this.bgmTimer = setInterval(playNextBar, 360);
+  }
+
+  stopBGM() {
+    this.isBgmPlaying = false;
+    if (this.bgmTimer) {
+      clearInterval(this.bgmTimer);
+      this.bgmTimer = null;
+    }
+  }
+}
+
+const AudioSys = new SoundSynth();
+
+function createFrogSvgMarkup() {
+  return `
+  <svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="25" cy="74" rx="14" ry="10" fill="#229954" transform="rotate(-15 25 74)" />
+    <ellipse cx="75" cy="74" rx="14" ry="10" fill="#229954" transform="rotate(15 75 74)" />
+    <ellipse cx="50" cy="62" rx="30" ry="24" fill="#2ecc71" />
+    <ellipse cx="50" cy="66" rx="20" ry="16" fill="#abebc6" />
+    <circle cx="36" cy="78" r="6" fill="#27ae60" />
+    <circle cx="64" cy="78" r="6" fill="#27ae60" />
+    <circle cx="33" cy="38" r="13" fill="#2ecc71" />
+    <circle cx="67" cy="38" r="13" fill="#2ecc71" />
+    <circle cx="33" cy="38" r="10" fill="#ffffff" />
+    <circle cx="67" cy="38" r="10" fill="#ffffff" />
+    <circle cx="35" cy="38" r="5" fill="#1b2631" />
+    <circle cx="65" cy="38" r="5" fill="#1b2631" />
+    <circle cx="37" cy="36" r="2" fill="#ffffff" />
+    <circle cx="67" cy="36" r="2" fill="#ffffff" />
+    <ellipse cx="28" cy="55" rx="5" ry="3" fill="#f1948a" opacity="0.8" />
+    <ellipse cx="72" cy="55" rx="5" ry="3" fill="#f1948a" opacity="0.8" />
+    <path d="M 40 56 Q 50 64 60 56" stroke="#145a32" stroke-width="3" fill="transparent" stroke-linecap="round" />
+  </svg>
+  `;
+}
+
+function createLilypadSvgMarkup() {
+  return `
+  <svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 10 A 40 40 0 1 1 20 80 L 50 50 Z" fill="#27ae60" />
+    <path d="M 48 12 A 37 37 0 1 1 22 78 L 48 50 Z" fill="#2ecc71" />
+    <path d="M 50 50 L 78 28 M 50 50 L 85 55 M 50 50 L 68 80 M 50 50 L 35 30" stroke="#1e8449" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  </svg>
+  `;
+}
+
+document.getElementById('landing-frog-mount').innerHTML = createFrogSvgMarkup();
+
+class ArenaFXEngine {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.particles = [];
+    this.ripples = [];
+    this.running = true;
+    this.resize();
+    this.loop = this.loop.bind(this);
+    requestAnimationFrame(this.loop);
+  }
+
+  resize() {
+    if (!this.canvas) return;
+    const rect = this.canvas.parentElement.getBoundingClientRect();
+    this.canvas.width = rect.width;
+    this.canvas.height = rect.height;
+  }
+
+  addRipple(x, y, maxR = 40, color = 'rgba(255,255,255,0.6)') {
+    this.ripples.push({ x, y, r: 5, maxR, alpha: 0.8, color });
+  }
+
+  addConfetti(x, y, count = 18) {
+    const colors = ['#f1c40f', '#e74c3c', '#2ecc71', '#9b59b6', '#3498db'];
+    for (let i = 0; i < count; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 2 + Math.random() * 5;
+      this.particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 2,
+        size: 4 + Math.random() * 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        life: 1,
+        decay: 0.02 + Math.random() * 0.02,
+        isConfetti: true
+      });
+    }
+  }
+
+  addWaterSplash(x, y, count = 14) {
+    for (let i = 0; i < count; i++) {
+      const angle = -Math.PI * (0.2 + Math.random() * 0.6);
+      const speed = 3 + Math.random() * 4;
+      this.particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        size: 3 + Math.random() * 3,
+        color: 'rgba(235, 248, 255, 0.85)',
+        life: 1,
+        decay: 0.03 + Math.random() * 0.03,
+        gravity: 0.18
+      });
+    }
+  }
+
+  loop() {
+    if (!this.running || !this.ctx) return;
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    for (let i = this.ripples.length - 1; i >= 0; i--) {
+      const r = this.ripples[i];
+      r.r += 1.2;
+      r.alpha -= 0.02;
+      if (r.alpha <= 0 || r.r >= r.maxR) {
+        this.ripples.splice(i, 1);
+        continue;
+      }
+      this.ctx.beginPath();
+      this.ctx.arc(r.x, r.y, r.r, 0, Math.PI * 2);
+      this.ctx.strokeStyle = `rgba(255, 255, 255, ${r.alpha})`;
+      this.ctx.lineWidth = 2;
+      this.ctx.stroke();
+    }
+
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      const p = this.particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.gravity) p.vy += p.gravity;
+      p.life -= p.decay;
+
+      if (p.life <= 0) {
+        this.particles.splice(i, 1);
+        continue;
+      }
+
+      this.ctx.save();
+      this.ctx.globalAlpha = Math.max(0, p.life);
+      this.ctx.fillStyle = p.color;
+      this.ctx.beginPath();
+      this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      this.ctx.fill();
+      this.ctx.restore();
+    }
+
+    requestAnimationFrame(this.loop);
+  }
+
+  destroy() {
+    this.running = false;
+  }
+}
+
+class PlayerGameSession {
+  constructor(id, name, containerEl, questionsList, onFinishedCallback) {
+    this.id = id;
+    this.name = name;
+    this.container = containerEl;
+    this.questions = questionsList;
+    this.onFinished = onFinishedCallback;
+
+    this.currentIndex = 0;
+    this.score = 0;
+    this.lives = CONFIG.useLives ? CONFIG.startLives : 999;
+    this.combo = 0;
+    this.maxCombo = 0;
+    this.correctCount = 0;
+    this.wrongCount = 0;
+    this.timerLeft = CONFIG.timerSeconds;
+    this.timerInterval = null;
+    this.isLocked = false;
+    this.startTime = Date.now();
+
+    this.currentQData = null;
+    this.activeLeafElements = [];
+
+    this.buildDOM();
+    this.fxEngine = new ArenaFXEngine(this.canvasEl);
+    this.loadQuestion();
+  }
+
+  buildDOM() {
+    this.container.innerHTML = `
+      <div class="player-arena player-theme-${this.id}" id="arena-p-${this.id}">
+        <canvas class="pond-canvas-layer"></canvas>
+        <div class="pond-overlay-fx">
+          <div class="flash-overlay"></div>
+        </div>
+
+        <div class="arena-header">
+          <span class="p-tag">${this.name}</span>
+          <div class="p-stats">
+            <span class="p-score">⭐ <span class="val-score">0</span></span>
+            ${CONFIG.useLives ? `<span class="p-lives">❤️❤️❤️</span>` : ''}
+            <span class="p-combo" style="display:none;">🔥 x1</span>
+          </div>
+        </div>
+
+        ${CONFIG.useTimer ? `
+          <div class="arena-timer-bar">
+            <div class="arena-timer-fill"></div>
+          </div>
+        ` : ''}
+
+        <div class="arena-question-box">
+          <div class="q-progress-info">
+            <span class="q-num-label">SOAL 1 / ${this.questions.length}</span>
+            <span class="q-time-label">${CONFIG.useTimer ? CONFIG.timerSeconds + 's' : ''}</span>
+          </div>
+          <div class="q-text">Memuat pertanyaan edukatif...</div>
+        </div>
+
+        <div class="arena-pond">
+          <div class="leaves-grid">
+            <div class="leaf-station" data-idx="0">
+              <div class="lilypad-svg-wrap">${createLilypadSvgMarkup()}</div>
+              <div class="leaf-card-btn"><span class="opt-key">A</span>. Pilihan 1</div>
+            </div>
+            <div class="leaf-station" data-idx="1">
+              <div class="lilypad-svg-wrap">${createLilypadSvgMarkup()}</div>
+              <div class="leaf-card-btn"><span class="opt-key">B</span>. Pilihan 2</div>
+            </div>
+            <div class="leaf-station" data-idx="2">
+              <div class="lilypad-svg-wrap">${createLilypadSvgMarkup()}</div>
+              <div class="leaf-card-btn"><span class="opt-key">C</span>. Pilihan 3</div>
+            </div>
+            <div class="leaf-station" data-idx="3">
+              <div class="lilypad-svg-wrap">${createLilypadSvgMarkup()}</div>
+              <div class="leaf-card-btn"><span class="opt-key">D</span>. Pilihan 4</div>
+            </div>
+          </div>
+
+          <div class="frog-home-area">
+            <div class="home-leaf">${createLilypadSvgMarkup()}</div>
+            <div class="frog-actor idle">
+              ${createFrogSvgMarkup()}
+            </div>
+          </div>
+        </div>
+
+        <div class="arena-feedback-modal">
+          <div class="feedback-status">BENAR! HEBAT!</div>
+          <div class="feedback-exp">Pembahasan materi sistem pernapasan manusia.</div>
+        </div>
+      </div>
+    `;
+
+    this.canvasEl = this.container.querySelector('.pond-canvas-layer');
+    this.scoreValEl = this.container.querySelector('.val-score');
+    this.livesEl = this.container.querySelector('.p-lives');
+    this.comboEl = this.container.querySelector('.p-combo');
+    this.qNumEl = this.container.querySelector('.q-num-label');
+    this.qTextEl = this.container.querySelector('.q-text');
+    this.timerFillEl = this.container.querySelector('.arena-timer-fill');
+    this.timerTextEl = this.container.querySelector('.q-time-label');
+    this.feedbackModal = this.container.querySelector('.arena-feedback-modal');
+    this.flashEl = this.container.querySelector('.flash-overlay');
+    this.frogEl = this.container.querySelector('.frog-actor');
+    this.homeAreaEl = this.container.querySelector('.frog-home-area');
+
+    this.activeLeafElements = Array.from(this.container.querySelectorAll('.leaf-station'));
+
+    this.activeLeafElements.forEach(station => {
+      station.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        const choiceIdx = parseInt(station.getAttribute('data-idx'));
+        this.handlePlayerChoice(choiceIdx);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (this.fxEngine) this.fxEngine.resize();
+    });
+  }
+
+  loadQuestion() {
+    if (this.currentIndex >= this.questions.length || (CONFIG.useLives && this.lives <= 0)) {
+      this.finishSession();
+      return;
+    }
+
+    this.isLocked = false;
+    this.feedbackModal.classList.remove('visible');
+    const rawQ = this.questions[this.currentIndex];
+
+    const optionsWithMeta = rawQ.options.map((text, idx) => ({
+      text,
+      isCorrect: idx === rawQ.correct
+    }));
+
+    for (let i = optionsWithMeta.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [optionsWithMeta[i], optionsWithMeta[j]] = [optionsWithMeta[j], optionsWithMeta[i]];
+    }
+
+    this.currentQData = {
+      question: rawQ.question,
+      explanation: rawQ.explanation,
+      options: optionsWithMeta
+    };
+
+    this.qNumEl.textContent = `SOAL ${this.currentIndex + 1} / ${this.questions.length}`;
+    this.qTextEl.textContent = this.currentQData.question;
+
+    const keyLabels = ['A', 'B', 'C', 'D'];
+    this.activeLeafElements.forEach((leaf, idx) => {
+      leaf.classList.remove('locked', 'bounce-correct', 'sink-wrong');
+      leaf.style.opacity = '1';
+      leaf.style.transform = '';
+      const btn = leaf.querySelector('.leaf-card-btn');
+      btn.innerHTML = `<strong>${keyLabels[idx]}.</strong> ${this.currentQData.options[idx].text}`;
+    });
+
+    this.resetFrogToHome();
+
+    if (CONFIG.useTimer) {
+      this.startTimer();
+    }
+  }
+
+  startTimer() {
+    this.clearTimer();
+    this.timerLeft = CONFIG.timerSeconds;
+    this.updateTimerBar();
+
+    this.timerInterval = setInterval(() => {
+      this.timerLeft -= 0.1;
+      this.updateTimerBar();
+      if (this.timerLeft <= 0) {
+        this.clearTimer();
+        this.handleTimeout();
+      }
+    }, 100);
+  }
+
+  updateTimerBar() {
+    if (!this.timerFillEl) return;
+    const pct = Math.max(0, (this.timerLeft / CONFIG.timerSeconds) * 100);
+    this.timerFillEl.style.width = pct + '%';
+    if (pct < 25) {
+      this.timerFillEl.style.backgroundColor = '#e74c3c';
+    } else {
+      this.timerFillEl.style.backgroundColor = '#f1c40f';
+    }
+    if (this.timerTextEl) {
+      this.timerTextEl.textContent = `${Math.ceil(this.timerLeft)}s`;
+    }
+  }
+
+  clearTimer() {
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    }
+  }
+
+  handleTimeout() {
+    if (this.isLocked) return;
+    this.isLocked = true;
+    this.combo = 0;
+    this.updateComboUI();
+    this.wrongCount++;
+    if (CONFIG.useLives) {
+      this.lives--;
+      this.updateLivesUI();
+    }
+
+    AudioSys.playWrong();
+    this.showFeedbackToast(false, `Waktu Habis! ${this.currentQData.explanation}`);
+    setTimeout(() => {
+      this.currentIndex++;
+      this.loadQuestion();
+    }, 1800);
+  }
+
+  handlePlayerChoice(choiceIdx) {
+    if (this.isLocked) return;
+    this.isLocked = true;
+    this.clearTimer();
+
+    const targetLeaf = this.activeLeafElements[choiceIdx];
+    const optionSelected = this.currentQData.options[choiceIdx];
+    const isCorrect = optionSelected.isCorrect;
+
+    this.animateFrogJump(targetLeaf, () => {
+      this.validateAnswer(isCorrect, targetLeaf);
+    });
+  }
+
+  animateFrogJump(targetLeafEl, onLanded) {
+    AudioSys.playJump();
+
+    const arenaRect = this.container.getBoundingClientRect();
+    const leafRect = targetLeafEl.getBoundingClientRect();
+    const homeRect = this.homeAreaEl.getBoundingClientRect();
+
+    const startX = homeRect.left + homeRect.width / 2 - arenaRect.left;
+    const startY = homeRect.top + homeRect.height / 2 - arenaRect.top;
+    const endX = leafRect.left + leafRect.width / 2 - arenaRect.left;
+    const endY = leafRect.top + leafRect.height / 2 - arenaRect.top;
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+    this.frogEl.className = 'frog-actor';
+
+    const jumpAnim = this.frogEl.animate([
+      { transform: 'translate(0px, 0px) scale(1, 0.8)', offset: 0 },
+      { transform: `translate(${deltaX * 0.3}px, ${deltaY * 0.5 - 60}px) scale(0.9, 1.2)`, offset: 0.4 },
+      { transform: `translate(${deltaX * 0.7}px, ${deltaY * 0.85 - 30}px) scale(1.05, 0.95)`, offset: 0.8 },
+      { transform: `translate(${deltaX}px, ${deltaY}px) scale(1.1, 0.85)`, offset: 1 }
+    ], {
+      duration: 520,
+      easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      fill: 'forwards'
+    });
+
+    jumpAnim.onfinish = () => {
+      const landX = endX;
+      const landY = endY + 10;
+      this.fxEngine.addRipple(landX, landY, 35);
+      if (onLanded) onLanded();
+    };
+  }
+
+  validateAnswer(isCorrect, targetLeafEl) {
+    const leafRect = targetLeafEl.getBoundingClientRect();
+    const arenaRect = this.container.getBoundingClientRect();
+    const centerX = leafRect.left + leafRect.width / 2 - arenaRect.left;
+    const centerY = leafRect.top + leafRect.height / 2 - arenaRect.top;
+
+    if (isCorrect) {
+      this.correctCount++;
+      this.combo++;
+      if (this.combo > this.maxCombo) this.maxCombo = this.combo;
+
+      let multiplier = 1.0;
+      if (this.combo >= 5) multiplier = 2.0;
+      else if (this.combo >= 3) multiplier = 1.5;
+      else if (this.combo >= 2) multiplier = 1.2;
+
+      const timeBonus = CONFIG.useTimer ? Math.floor((this.timerLeft / CONFIG.timerSeconds) * 50) : 25;
+      const roundScore = Math.floor((100 + timeBonus) * multiplier);
+      this.score += roundScore;
+
+      this.scoreValEl.textContent = this.score;
+      this.updateComboUI();
+
+      AudioSys.playCorrect();
+      targetLeafEl.classList.add('bounce-correct');
+      this.frogEl.className = 'frog-actor happy';
+      this.fxEngine.addConfetti(centerX, centerY, 20);
+      this.fxEngine.addRipple(centerX, centerY, 50);
+
+      this.showFeedbackToast(true, this.currentQData.explanation, roundScore);
+
+      setTimeout(() => {
+        this.nextQuestionTransition();
+      }, 1400);
+
+    } else {
+      this.wrongCount++;
+      this.combo = 0;
+      this.updateComboUI();
+
+      if (CONFIG.useLives) {
+        this.lives--;
+        this.updateLivesUI();
+      }
+
+      AudioSys.playWrong();
+      AudioSys.playSplash();
+
+      targetLeafEl.classList.add('sink-wrong');
+      this.frogEl.className = 'frog-actor sad';
+
+      this.fxEngine.addWaterSplash(centerX, centerY + 20, 16);
+      this.fxEngine.addRipple(centerX, centerY + 20, 60);
+      this.triggerFlashEffect();
+
+      this.showFeedbackToast(false, this.currentQData.explanation);
+
+      setTimeout(() => {
+        if (CONFIG.useLives && this.lives <= 0) {
+          this.finishSession();
+        } else {
+          this.nextQuestionTransition();
+        }
+      }, 1600);
+    }
+  }
+
+  nextQuestionTransition() {
+    this.currentIndex++;
+    this.loadQuestion();
+  }
+
+  resetFrogToHome() {
+    // Hentikan animasi lompatan agar posisi akhir tidak terbawa ke soal berikutnya.
+    if (this.frogEl.getAnimations) {
+      this.frogEl.getAnimations().forEach(animation => animation.cancel());
+    }
+    this.frogEl.className = 'frog-actor idle';
+    this.frogEl.style.transform = 'translate(0px, 0px)';
+  }
+
+  triggerFlashEffect() {
+    if (!this.flashEl) return;
+    this.flashEl.style.opacity = '0.6';
+    setTimeout(() => {
+      this.flashEl.style.opacity = '0';
+    }, 250);
+  }
+
+  showFeedbackToast(isCorrect, expText, points = 0) {
+    const statusEl = this.feedbackModal.querySelector('.feedback-status');
+    const expEl = this.feedbackModal.querySelector('.feedback-exp');
+
+    if (isCorrect) {
+      statusEl.className = 'feedback-status correct';
+      statusEl.textContent = `✓ BENAR! (+${points})`;
+    } else {
+      statusEl.className = 'feedback-status wrong';
+      statusEl.textContent = `✕ BELUM TEPAT!`;
+    }
+
+    expEl.textContent = expText;
+    this.feedbackModal.classList.add('visible');
+  }
+
+  updateComboUI() {
+    if (!this.comboEl) return;
+    if (this.combo >= 2) {
+      this.comboEl.style.display = 'inline-block';
+      this.comboEl.textContent = `🔥 COMBO x${this.combo}`;
+    } else {
+      this.comboEl.style.display = 'none';
+    }
+  }
+
+  updateLivesUI() {
+    if (!this.livesEl) return;
+    let hearts = '';
+    for (let i = 0; i < this.lives; i++) hearts += '❤️';
+    this.livesEl.textContent = hearts || '💀';
+  }
+
+  finishSession() {
+    this.clearTimer();
+    const durationSeconds = Math.floor((Date.now() - this.startTime) / 1000);
+    const totalAttempted = this.correctCount + this.wrongCount;
+    const accuracy = totalAttempted > 0 ? Math.round((this.correctCount / totalAttempted) * 100) : 0;
+
+    const summary = {
+      id: this.id,
+      name: this.name,
+      score: this.score,
+      correct: this.correctCount,
+      wrong: this.wrongCount,
+      accuracy: accuracy,
+      maxCombo: this.maxCombo,
+      duration: durationSeconds
+    };
+
+    if (this.onFinished) {
+      this.onFinished(summary);
+    }
+  }
+
+  destroy() {
+    this.clearTimer();
+    if (this.fxEngine) this.fxEngine.destroy();
+  }
+}
+
+class FroggyGameManager {
+  constructor() {
+    this.currentMode = 'solo';
+    this.players = [];
+    this.finishedPlayers = [];
+    this.isPaused = false;
+
+    this.initDOMElements();
+    this.bindEvents();
+    this.applySettingsToUI();
+  }
+
+  initDOMElements() {
+    this.screens = {
+      landing: document.getElementById('landing-screen'),
+      mode: document.getElementById('mode-screen'),
+      game: document.getElementById('game-screen'),
+      result: document.getElementById('result-screen'),
+      name: document.getElementById('name-screen')
+    };
+
+    this.btnStart = document.getElementById('btn-start-game');
+    this.btnOpenGuide = document.getElementById('btn-open-guide');
+    this.btnBackToLanding = document.getElementById('btn-back-to-landing');
+    this.modeCards = document.querySelectorAll('.mode-card');
+    this.gameGrid = document.getElementById('game-grid');
+
+    this.btnSoundToggle = document.getElementById('btn-sound-toggle');
+    this.btnHelpGlobal = document.getElementById('btn-help-global');
+    this.btnSettingsGlobal = document.getElementById('btn-settings-global');
+    this.btnFullscreen = document.getElementById('btn-fullscreen');
+    this.btnPauseGlobal = document.getElementById('btn-pause-global');
+
+    this.helpModal = document.getElementById('help-modal');
+    this.settingsModal = document.getElementById('settings-modal');
+    this.pauseModal = document.getElementById('pause-modal');
+
+    this.resultTableBody = document.getElementById('result-table-body');
+    this.resultAdvice = document.getElementById('result-advice');
+    this.btnRestart = document.getElementById('btn-restart-game');
+    this.btnMenuFromResult = document.getElementById('btn-menu-from-result');
+  }
+
+  bindEvents() {
+    this.btnStart.addEventListener('click', () => {
+      AudioSys.initContext();
+      AudioSys.playClick();
+      AudioSys.startBGM();
+      this.showScreen('mode');
+    });
+
+    this.btnBackToLanding.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.showScreen('landing');
+    });
+
+    this.btnOpenGuide.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.openModal('help-modal');
+    });
+
+    this.modeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        AudioSys.playClick();
+        this.currentMode = card.getAttribute('data-mode');
+        const playerCount = this.currentMode === 'solo' ? 1 : (this.currentMode === 'duel' ? 2 : 4);
+        document.querySelectorAll('.player-name-field').forEach(field => {
+          field.classList.toggle('hidden', parseInt(field.dataset.playerCount) > playerCount);
+        });
+        document.querySelectorAll('.player-name-field input').forEach(input => {
+          input.value = '';
+          input.style.borderColor = '#27ae60';
+        });
+        this.showScreen('name');
+        setTimeout(() => document.getElementById('player-name-1').focus(), 100);
+      });
+    });
+
+    document.getElementById('btn-start-named-game').addEventListener('click', () => {
+      AudioSys.playClick();
+      const playerCount = this.currentMode === 'solo' ? 1 : (this.currentMode === 'duel' ? 2 : 4);
+      const nameInputs = Array.from(document.querySelectorAll('.player-name-field input')).slice(0, playerCount);
+      const missingInput = nameInputs.find(input => !input.value.trim());
+      if (missingInput) { missingInput.focus(); missingInput.style.borderColor = '#e74c3c'; return; }
+      nameInputs.forEach(input => input.style.borderColor = '#27ae60');
+      this.startGameWithMode(this.currentMode);
+    });
+
+    document.getElementById('btn-back-to-mode').addEventListener('click', () => {
+      AudioSys.playClick();
+      this.showScreen('mode');
+    });
+
+    this.btnSoundToggle.addEventListener('click', () => {
+      CONFIG.audioMuted = !CONFIG.audioMuted;
+      this.btnSoundToggle.textContent = CONFIG.audioMuted ? '🔇' : '🔊';
+      if (CONFIG.audioMuted) {
+        AudioSys.stopBGM();
+      } else {
+        AudioSys.startBGM();
+      }
+      saveGlobalConfig();
+    });
+
+    this.btnHelpGlobal.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.openModal('help-modal');
+    });
+
+    this.btnSettingsGlobal.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.openModal('settings-modal');
+    });
+
+    this.btnFullscreen.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.toggleFullscreen();
+    });
+
+    this.btnPauseGlobal.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.pauseGame();
+    });
+
+    document.querySelectorAll('[data-close]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modalId = btn.getAttribute('data-close');
+        this.closeModal(modalId);
+      });
+    });
+
+    document.getElementById('btn-save-settings').addEventListener('click', () => {
+      this.saveSettingsFromUI();
+      this.closeModal('settings-modal');
+    });
+
+    document.getElementById('btn-resume-game').addEventListener('click', () => {
+      this.resumeGame();
+    });
+
+    document.getElementById('btn-restart-from-pause').addEventListener('click', () => {
+      this.closeModal('pause-modal');
+      this.startGameWithMode(this.currentMode);
+    });
+
+    document.getElementById('btn-menu-from-pause').addEventListener('click', () => {
+      this.closeModal('pause-modal');
+      this.exitToMainMenu();
+    });
+
+    this.btnRestart.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.startGameWithMode(this.currentMode);
+    });
+
+    this.btnMenuFromResult.addEventListener('click', () => {
+      AudioSys.playClick();
+      this.exitToMainMenu();
+    });
+
+    window.addEventListener('keydown', (e) => this.handleGlobalKey(e));
+  }
+
+  showScreen(screenKey) {
+    Object.keys(this.screens).forEach(key => {
+      this.screens[key].classList.add('hidden');
+    });
+    this.screens[screenKey].classList.remove('hidden');
+
+    if (screenKey === 'game') {
+      this.btnPauseGlobal.classList.remove('hidden');
+    } else {
+      this.btnPauseGlobal.classList.add('hidden');
+    }
+  }
+
+  openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+  }
+
+  closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+  }
+
+  toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+      this.btnFullscreen.textContent = '⛶ Keluar';
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+        this.btnFullscreen.textContent = '⛶';
+      }
+    }
+  }
+
+  applySettingsToUI() {
+    document.getElementById('cfg-questions-count').value = CONFIG.questionCount;
+    document.getElementById('cfg-use-timer').value = String(CONFIG.useTimer);
+    document.getElementById('cfg-timer-seconds').value = CONFIG.timerSeconds;
+    document.getElementById('cfg-use-lives').value = String(CONFIG.useLives);
+    document.getElementById('cfg-start-lives').value = CONFIG.startLives;
+    document.getElementById('cfg-random-q').value = String(CONFIG.randomQuestions);
+    document.getElementById('cfg-bgm-volume').value = CONFIG.bgmVolume;
+    document.getElementById('cfg-sfx-volume').value = CONFIG.sfxVolume;
+  }
+
+  saveSettingsFromUI() {
+    CONFIG.questionCount = parseInt(document.getElementById('cfg-questions-count').value);
+    CONFIG.useTimer = document.getElementById('cfg-use-timer').value === 'true';
+    CONFIG.timerSeconds = parseInt(document.getElementById('cfg-timer-seconds').value);
+    CONFIG.useLives = document.getElementById('cfg-use-lives').value === 'true';
+    CONFIG.startLives = parseInt(document.getElementById('cfg-start-lives').value);
+    CONFIG.randomQuestions = document.getElementById('cfg-random-q').value === 'true';
+    CONFIG.bgmVolume = parseFloat(document.getElementById('cfg-bgm-volume').value);
+    CONFIG.sfxVolume = parseFloat(document.getElementById('cfg-sfx-volume').value);
+    saveGlobalConfig();
+  }
+
+  getPreparedQuestions() {
+    let pool = [...QUESTION_BANK];
+    if (CONFIG.randomQuestions) {
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+    }
+    return pool.slice(0, Math.min(CONFIG.questionCount, pool.length));
+  }
+
+  startGameWithMode(mode) {
+    this.currentMode = mode;
+    this.finishedPlayers = [];
+    this.players.forEach(p => p.destroy());
+    this.players = [];
+
+    this.gameGrid.className = mode;
+    this.gameGrid.innerHTML = '';
+
+    const playerCount = mode === 'solo' ? 1 : (mode === 'duel' ? 2 : 4);
+
+    for (let i = 1; i <= playerCount; i++) {
+      const pContainer = document.createElement('div');
+      pContainer.className = 'player-cell-wrapper';
+      pContainer.style.width = '100%';
+      pContainer.style.height = '100%';
+      this.gameGrid.appendChild(pContainer);
+
+      const pQuestions = this.getPreparedQuestions();
+      const nameInput = document.getElementById(`player-name-${i}`);
+      const displayName = nameInput ? nameInput.value.trim() : `Pemain ${i}`;
+      const pSession = new PlayerGameSession(
+        i,
+        displayName,
+        pContainer,
+        pQuestions,
+        (summary) => this.handlePlayerFinished(summary)
+      );
+      this.players.push(pSession);
+    }
+
+    this.showScreen('game');
+  }
+
+  handlePlayerFinished(summary) {
+    this.finishedPlayers.push(summary);
+    if (this.finishedPlayers.length >= this.players.length) {
+      setTimeout(() => {
+        this.showFinalResults();
+      }, 800);
+    }
+  }
+
+  showFinalResults() {
+    this.finishedPlayers.sort((a, b) => b.score - a.score);
+
+    this.resultTableBody.innerHTML = '';
+    this.finishedPlayers.forEach((p, idx) => {
+      const row = document.createElement('tr');
+      const medal = idx === 0 ? '🥇 ' : (idx === 1 ? '🥈 ' : (idx === 2 ? '🥉 ' : ''));
+      row.innerHTML = `
+        <td><strong>${medal}${p.name}</strong></td>
+        <td><strong style="color:#d35400;">${p.score}</strong></td>
+        <td>${p.correct}</td>
+        <td>${p.wrong}</td>
+        <td>${p.accuracy}%</td>
+        <td>🔥 x${p.maxCombo}</td>
+      `;
+      this.resultTableBody.appendChild(row);
+    });
+
+    const bestAcc = this.finishedPlayers[0].accuracy;
+    if (bestAcc >= 90) {
+      this.resultAdvice.innerHTML = '<strong>LUAR BIASA!</strong> Kamu sudah sangat menguasai konsep Sistem Pernapasan Manusia dengan cemerlang!';
+    } else if (bestAcc >= 75) {
+      this.resultAdvice.innerHTML = '<strong>BAGUS SEKALI!</strong> Pemahamanmu sudah tinggi, sedikit lagi menjadi ahli pernapasan!';
+    } else if (bestAcc >= 60) {
+      this.resultAdvice.innerHTML = '<strong>CUKUP BAIK!</strong> Mari pelajari kembali beberapa nama organ seperti alveolus dan bronkiolus.';
+    } else {
+      this.resultAdvice.innerHTML = '<strong>TETAP SEMANGAT!</strong> Belajar sambil bermain katak melompat akan membuatmu semakin paham!';
+    }
+
+    this.showScreen('result');
+  }
+
+  pauseGame() {
+    this.isPaused = true;
+    this.players.forEach(p => p.clearTimer());
+    this.openModal('pause-modal');
+  }
+
+  resumeGame() {
+    this.isPaused = false;
+    this.closeModal('pause-modal');
+    if (CONFIG.useTimer) {
+      this.players.forEach(p => {
+        if (!p.isLocked) p.startTimer();
+      });
+    }
+  }
+
+  exitToMainMenu() {
+    this.players.forEach(p => p.destroy());
+    this.players = [];
+    this.showScreen('landing');
+  }
+
+  handleGlobalKey(e) {
+    if (this.isPaused || this.screens.game.classList.contains('hidden')) return;
+
+    const key = e.key.toUpperCase();
+
+    if (this.currentMode === 'solo' && this.players[0]) {
+      if (key === '1' || key === 'A') this.players[0].handlePlayerChoice(0);
+      if (key === '2' || key === 'S') this.players[0].handlePlayerChoice(1);
+      if (key === '3' || key === 'D') this.players[0].handlePlayerChoice(2);
+      if (key === '4' || key === 'F') this.players[0].handlePlayerChoice(3);
+    }
+
+    if (this.currentMode === 'duel') {
+      if (this.players[0]) {
+        if (key === 'A') this.players[0].handlePlayerChoice(0);
+        if (key === 'S') this.players[0].handlePlayerChoice(1);
+        if (key === 'D') this.players[0].handlePlayerChoice(2);
+        if (key === 'F') this.players[0].handlePlayerChoice(3);
+      }
+      if (this.players[1]) {
+        if (key === 'J') this.players[1].handlePlayerChoice(0);
+        if (key === 'K') this.players[1].handlePlayerChoice(1);
+        if (key === 'L') this.players[1].handlePlayerChoice(2);
+        if (key === ';' || key === ':') this.players[1].handlePlayerChoice(3);
+      }
+    }
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.GameApp = new FroggyGameManager();
+});
+</script>
+ 
+</body></html>
